@@ -6,7 +6,7 @@
         </File>
     </Appenders>
     <Loggers>
-        <logger name="ParametersServletLogger" level="ALL">
+        <logger name="blackWhiteImageServletLogger" level="ALL">
             <AppenderRef ref="MyFile"/>
         </logger>
     </Loggers>

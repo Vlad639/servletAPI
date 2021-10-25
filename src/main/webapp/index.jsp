@@ -2,14 +2,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Город</title>
+    <title>Сделать изображение чёрно-белым</title>
+    <style>
+        .form {
+            text-align: center;
+        }
+
+    </style>
+
 </head>
 <body>
-<h2 style="text-align:center">Главная страница</h2>
+<h2 style="text-align:center" >Выберите файл для загрузки</h2>
+<div class = "form">
 
-<p style="text-align:center"><img alt="Город" src="city-picture.jpg" style="height:427px; width:640px" /></p>
-<form id="form1" style = "text-align: center" action="/dog">
-    <input type="SUBMIT" name="button" value="@">
-</form>
+    <form action="${pageContext.request.contextPath}/blackWhiteImage" enctype="multipart/form-data" method="post">
+        <p>Загрузите фотографию</p>
+        <p><input type="file" name="image" multiple accept="image/*,image/jpeg">
+            <input type="submit" value="Отправить"></p>
+    </form>
+
+</div>
 </body>
 </html>
