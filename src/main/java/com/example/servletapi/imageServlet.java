@@ -61,6 +61,14 @@ public class imageServlet extends HttpServlet {
         ImageIO.write(blackWhiteImage, "png", response.getOutputStream());
     }
 
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        out.println("Для работы с данной страницей сначала загрузите изображение!");
+        out.close();
+    }
+
+
     public void destroy() {
     }
 }
